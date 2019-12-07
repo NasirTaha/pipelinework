@@ -33,6 +33,7 @@ def sendToPost(String project_name, String stage_name, String flag ){
             "flag": "$flag",
             "build_id": "$env.BUILD_NUMBER",
             "node_name": "$env.NODE_NAME",
+            "build_url": "$env.BUILD_URL",
             "timestamp": "$build_timestamp"}
         """
         post.setRequestMethod("POST")
