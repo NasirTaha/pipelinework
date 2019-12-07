@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def call(String name, Closure body) {
-        echo "before override stage"  
+        echo "before override stage $currentBuild.currentResult"  
         
         def project_name = env.JOB_NAME
                 
