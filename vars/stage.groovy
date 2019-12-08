@@ -2,7 +2,9 @@
 
 def call(String name, Closure body) {
         echo "before override stage $currentBuild.currentResult"  
-        
+        if(name == "checkout"){
+            env.unique_id='999'
+        }
         def project_name = env.JOB_NAME
                 
         sendToPost(project_name, name, "start")
