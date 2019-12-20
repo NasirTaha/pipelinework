@@ -27,7 +27,7 @@ def sendToPost(String project_name, String stage_name, String flag ){
         def now = new Date()
         def build_timestamp = now.format("yyyy-MM-dd HH:mm:ss.SSS")
 
-        def url = "http://localhost:1000/jobinfo/"
+        def url = "http://de191635.de.kostal.int:7000/jobinfo/"
         def post = new URL(url).openConnection();
         def message = """
         {"project_name": "$project_name",
